@@ -35,8 +35,13 @@ function Form({ route, method }) {
 
     return (
         <form onSubmit={handleSubmit} className="form-container">
-            <h2>Welcome to the GMA Portal</h2>
-            <h1>{name}</h1>
+            <div class='welcome'>
+                <h2>Welcome to the GMA Portal</h2>
+                <h1>{name}</h1>
+            </div>
+            <div class='text'>
+                <p>Username</p>
+            </div>
             <input
                 className="form-input"
                 type="text"
@@ -44,6 +49,9 @@ function Form({ route, method }) {
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
             />
+            <div class='text'>
+                <p>Password</p>
+            </div>
             <input
                 className="form-input"
                 type="password"

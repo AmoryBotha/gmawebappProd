@@ -2,6 +2,20 @@
   background-color: #0b2645;
 }
 
+.welcome{
+  color: #f9fbfd;
+  margin-bottom: 0.5em;
+  padding-bottom: 60px;
+  font-size: 20px;
+}
+
+.text{
+  color: #f9fbfd;
+  margin-bottom: 0.5em;
+  padding-bottom: 60px;
+  font-size: 14px;
+}
+
 .form-container {
     display: flex;
     flex-direction: column;
