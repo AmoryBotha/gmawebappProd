@@ -11,12 +11,36 @@
   }
   
   .form-input {
-    width: 90%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
+    height: 3.75em;
+    margin-bottom: 1.6em;
+    padding-top: 0.8em;
+    padding-right: 1.12em;
+    padding-bottom: 0.8em;
+    padding-left: 1.12em;
+    border-top-style: solid;
+    border-top-width: 1px;
+    border-top-color: #49617c;
+    border-right-style: solid;
+    border-right-width: 1px;
+    border-right-color: #49617c;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #49617c;
+    border-left-style: solid;
+    border-left-width: 1px;
+    border-left-color: #49617c;
+    border-top-left-radius: 0.62em;
+    border-top-right-radius: 0.62em;
+    border-bottom-left-radius: 0.62em;
+    border-bottom-right-radius: 0.62em;
+    background-color: var(--dark-blue-1);
+    transition-property: border-color;
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+    color: #16222f;
+    font-size: 12px;
+    line-height: 1.3em;
+    letter-spacing: 0.1em;
   }
   
   .form-button {
