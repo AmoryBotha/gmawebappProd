@@ -34,6 +34,7 @@ function Form({ route, method }) {
     };
 
     return (
+        
         <form onSubmit={handleSubmit} className="form-container">
             <div class='welcome'>
                 <h1>Welcome to the GMA Portal</h1>
