@@ -36,7 +36,7 @@ function Form({ route, method }) {
     return (
         <form onSubmit={handleSubmit} className="form-container">
             <div class='welcome'>
-                <h2>Welcome to the GMA Portal</h2>
+                <h1>Welcome to the GMA Portal</h1>
                 <h1>{name}</h1>
             </div>
             <div class='text'>
