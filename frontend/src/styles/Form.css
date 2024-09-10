@@ -57,7 +57,7 @@
     transition-property: border-color;
     transition-duration: 300ms;
     transition-timing-function: cubic-bezier(.25, .46, .45, .94);
-    color: #16222f;
+    color: #eaeef1;
     font-size: 12px;
     line-height: 1.3em;
     letter-spacing: 0.1em;
