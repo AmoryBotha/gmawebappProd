@@ -11,7 +11,7 @@ function Form({ route, method }) {
     const [password, setPassword] = useState("");
     const [cell, setCell] = useState("");
     const [id, setID] = useState("");
-    const [email, setUsername] = useState("");
+    const [username, setUsername] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -90,7 +90,7 @@ function Form({ route, method }) {
             <input
                 className="form-input"
                 type="text"
-                value={email}
+                value={username}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
             />
