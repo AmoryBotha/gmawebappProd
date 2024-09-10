@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function MyForm() {
+function Form() {
   const [formData, setFormData] = useState({
     firstName: '',
     lastName: '',
@@ -91,4 +91,4 @@ function MyForm() {
   );
 }
 
-export default MyForm;
+export default Form;
