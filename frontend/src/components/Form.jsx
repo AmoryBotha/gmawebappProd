@@ -6,7 +6,7 @@ import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 
 function Form({ route, method }) {
-    const [email, setUsername] = useState("");
+    const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
@@ -41,14 +41,14 @@ function Form({ route, method }) {
                 <h1>{name}</h1>
             </div>
             <div class='text'>
-                <p>Username</p>
+                <p>Email</p>
             </div>
             <input
                 className="form-input"
                 type="text"
-                value={email}
+                value={username}
                 onChange={(e) => setUsername(e.target.value)}
-                placeholder="Username"
+                placeholder="Email"
             />
             <div class='text'>
                 <p>Password</p>
