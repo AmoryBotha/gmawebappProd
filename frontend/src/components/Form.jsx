@@ -6,12 +6,12 @@ import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 
 function Form({ route, method }) {
-    const [username, setUsername] = useState("");
+    const [email, setUsername] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
-    const name = method === "login" ? "Login" : "Register";
+    const name = method === "Login";
 
     const handleSubmit = async (e) => {
         setLoading(true);
@@ -46,7 +46,7 @@ function Form({ route, method }) {
             <input
                 className="form-input"
                 type="text"
-                value={username}
+                value={email}
                 onChange={(e) => setUsername(e.target.value)}
                 placeholder="Username"
             />
