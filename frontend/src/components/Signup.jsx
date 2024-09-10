@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN, REFRESH_TOKEN } from "../constants";
+import { ACCESS_TOKEN, REFRESH_TOKEN, fname,lname,cell,id,username } from "../constants";
 import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 
@@ -27,6 +27,20 @@ function Form({ route, method }) {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
                 navigate("/")
+
+            const res = await fetch("https://prod-26.westeurope.logic.azure.com:443/workflows/01fe4398170e437bbc3b0d8d2689f151/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=8zQrsZYowlCUps2EOSJ6W5tlBuP4zmhnnjgetdsCK68", {
+                  method: "POST",
+                  body: JSON.stringify({
+                  fname1 : fname,
+                  lname1 : lname,
+                  email1 : username,
+                  cell1 : cell,
+                  id1 : id
+
+                  }),headers: {
+                      "Content-type": "application/json; charset=UTF-8"
+                  }
+            })
             } else {
                 navigate("/login")
             }
