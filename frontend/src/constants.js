@@ -9,4 +9,4 @@ export const webIdStore = "webid";
 export const conIdStore = "conid";
 export const ownerStore = "false";
 export const trusteeStore = "false";
-export const contractorStore = "false"
+export const contractorStore = "false";

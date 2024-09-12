@@ -37,7 +37,7 @@ function Form({ route, method }) {
             }
       });
         const dataRes = await data.json();
-
+        console.log(dataRes);
         //Set LocalStorage Items For User
         localStorage.setItem(fnameStore, fname);
         localStorage.setItem(lnameStore, lname);
