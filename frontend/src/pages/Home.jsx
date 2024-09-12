@@ -4,15 +4,20 @@ import Note from "../components/Note"
 import "../styles/Home.css"
 import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 
-const owner = localStorage.getItem(ownerStore);
-const contractor = localStorage.getItem(contractorStore);
-const trustee = localStorage.getItem(trusteeStore);
-localStorage.getItem(webIdStore);
-localStorage.getItem(conIdStore);
-localStorage.getItem(usernameStore);
 
 
 function Home() {
+
+    const owner = localStorage.getItem(ownerStore);
+    const contractor = localStorage.getItem(contractorStore);
+    const trustee = localStorage.getItem(trusteeStore);
+    localStorage.getItem(webIdStore);
+    localStorage.getItem(conIdStore);
+    localStorage.getItem(usernameStore);
+    console.log(localStorage.getItem(ownerStore));
+    console.log(localStorage.getItem(contractorStore));
+    console.log(localStorage.getItem(trusteeStore));
+
     
     const [notes, setNotes] = useState([]);
     const [content, setContent] = useState("");
@@ -83,6 +88,7 @@ else{
         </div>
     );
 }
+
 }
 
 export default Home;
