@@ -37,7 +37,6 @@ function Form({ route, method }) {
             }
       });
         const dataRes = await data.json();
-        console.log(dataRes);
         //Set LocalStorage Items For User
         localStorage.setItem(fnameStore, fname);
         localStorage.setItem(lnameStore, lname);
@@ -49,6 +48,7 @@ function Form({ route, method }) {
         localStorage.setItem(ownerStore, dataRes.Owner);
         localStorage.setItem(trusteeStore, dataRes.Trustee);
         localStorage.setItem(contractorStore, dataRes.Contractor);
+        console.log(Object.keys(localStorage));
 
             const res = await api.post(route, { username, password })
             if (method === "login") {
