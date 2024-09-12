@@ -48,7 +48,6 @@ function Form({ route, method }) {
         localStorage.setItem(ownerStore, dataRes.accOwn);
         localStorage.setItem(trusteeStore, dataRes.accTrus);
         localStorage.setItem(contractorStore, dataRes.accCont);
-        console.log(localStorage.getItem(contractorStore));
         console.log(localStorage.getItem(trusteeStore));
         console.log(localStorage.getItem(webIdStore));
 
