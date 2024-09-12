@@ -48,7 +48,10 @@ function Form({ route, method }) {
         localStorage.setItem(ownerStore, dataRes.Owner);
         localStorage.setItem(trusteeStore, dataRes.Trustee);
         localStorage.setItem(contractorStore, dataRes.Contractor);
-        console.log(Object.keys(localStorage));
+        console.log(localStorage.getItem(ownerStore));
+        console.log(localStorage.getItem(contractorStore));
+        console.log(localStorage.getItem(trusteeStore));
+        console.log(localStorage.getItem(webIdStore));
 
             const res = await api.post(route, { username, password })
             if (method === "login") {
