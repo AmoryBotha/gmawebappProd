@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
+import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
+
 const owner = localStorage.getItem(ownerStore);
 const contractor = localStorage.getItem(contractorStore);
 const trustee = localStorage.getItem(trusteeStore);
