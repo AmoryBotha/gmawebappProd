@@ -12,6 +12,11 @@ function Form({ route, method }) {
     const [cell, setCell] = useState("");
     const [id, setID] = useState("");
     const [username, setUsername] = useState("");
+    const [profID, setProfId] = useState("");
+    const [contactID, setConId] = useState("");
+    const [owner, setOwner] = useState(false);
+    const [trustee, setTrustee] = useState(false);
+    const [contractor, setContractor] = useState(false);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -22,7 +27,7 @@ function Form({ route, method }) {
         e.preventDefault();
 
         try {
-            //Replace with flow that creates user profile on DV
+            //Replace with flow that creates user profile on DV eventually replace with Sirveo Link
           const data = await fetch("https://prod-91.westeurope.logic.azure.com:443/workflows/4e1c017f70d748bb9a1fefbfbfad48bf/triggers/manual/paths/invoke?api-version=2016-06-01&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=a9p6TXKcwsjITmZyWkkLybBeTOgg0ddf976m69dZE-0", {
             method: "POST",
             body: JSON.stringify({
@@ -36,6 +41,12 @@ function Form({ route, method }) {
                 "Content-type": "application/json; charset=UTF-8"
             }
       });
+        const dataRes = await data.json();
+        setOwner(dataRes.Owner);
+        setTrustee(dataRes.Trustee);
+        setContractor(dataRes.Contractor);
+        setProfId(dataRes.UserP);
+        setConId(dataRes.ContactID);
             const res = await api.post(route, { username, password })
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
