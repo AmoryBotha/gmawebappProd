@@ -18,47 +18,7 @@ function Home() {
     console.log(localStorage.getItem(contractorStore));
     console.log(localStorage.getItem(trusteeStore));
 
-    
-    const [notes, setNotes] = useState([]);
-    const [content, setContent] = useState("");
-    const [title, setTitle] = useState("");
-
-    useEffect(() => {
-        getNotes();
-    }, []);
-
-    const getNotes = () => {
-        api
-            .get("/api/notes/")
-            .then((res) => res.data)
-            .then((data) => {
-                setNotes(data);
-                console.log(data);
-            })
-            .catch((err) => alert(err));
-    };
-
-    const deleteNote = (id) => {
-        api
-            .delete(`/api/notes/delete/${id}/`)
-            .then((res) => {
-                if (res.status === 204) alert("Note deleted!");
-                else alert("Failed to delete note.");
-                getNotes();
-            })
-            .catch((error) => alert(error));
-    };
-
     const createNote = (e) => {
-        e.preventDefault();
-        api
-            .post("/api/notes/", { content, title })
-            .then((res) => {
-                if (res.status === 201) alert("Note created!");
-                else alert("Failed to make note.");
-                getNotes();
-            })
-            .catch((err) => alert(err));
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
@@ -75,6 +35,34 @@ function Home() {
         </div>
     );
 }
+if(owner === "false" && contractor === "true" && trustee === "true" )
+{
+    return (
+        <div>
+            <div>
+                <h1>GMA USER PORTAL</h1>
+            </div>
+            <h4>Welcome To The GMA Portal</h4>
+            <form onSubmit={createNote}>
+                <input type="submit" value="Trustee Portal"></input>
+                <input type="submit" value="Contractor Portal"></input>
+            </form>
+        </div>
+    );
+}
+if(owner === "false" && contractor === "false" && trustee === "true" ){
+    return (
+        <div>
+            <div>
+                <h1>GMA USER PORTAL</h1>
+            </div>
+            <h4>Welcome To The GMA Portal</h4>
+            <form onSubmit={createNote}>
+                <input type="submit" value="Contractor Portal"></input>
+            </form>
+        </div>
+    );
+}
 else{
     return (
         <div>
@@ -83,12 +71,11 @@ else{
             </div>
             <h4>Welcome To The GMA Portal</h4>
             <form onSubmit={createNote}>
-                <input type="submit" value="Owner Portal"></input>
+            <h1>You do not have access to any portals, please contact us.</h1>
             </form>
         </div>
-    );
+    );  
 }
-
 }
 
 export default Home;
