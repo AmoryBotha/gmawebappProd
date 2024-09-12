@@ -1,7 +1,7 @@
 import { useState } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN, REFRESH_TOKEN, fname,lname,cell,id,username } from "../constants";
+import { ACCESS_TOKEN, REFRESH_TOKEN, fnameStore,lnameStore,cellStore,idStore,usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 
@@ -12,11 +12,6 @@ function Form({ route, method }) {
     const [cell, setCell] = useState("");
     const [id, setID] = useState("");
     const [username, setUsername] = useState("");
-    const [profID, setProfId] = useState("");
-    const [contactID, setConId] = useState("");
-    const [owner, setOwner] = useState(false);
-    const [trustee, setTrustee] = useState(false);
-    const [contractor, setContractor] = useState(false);
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
 
@@ -42,11 +37,20 @@ function Form({ route, method }) {
             }
       });
         const dataRes = await data.json();
-        setOwner(dataRes.Owner);
-        setTrustee(dataRes.Trustee);
-        setContractor(dataRes.Contractor);
-        setProfId(dataRes.UserP);
-        setConId(dataRes.ContactID);
+
+        //Set LocalStorage Items For User
+        localStorage.setItem(fnameStore, fname);
+        localStorage.setItem(lnameStore, lname);
+        localStorage.setItem(cellStore, cell);
+        localStorage.setItem(idStore, id);
+        localStorage.setItem(usernameStore, username);
+        localStorage.setItem(webIdStore, dataRes.UserP);
+        localStorage.setItem(conIdStore, dataRes.ContactID);
+        localStorage.setItem(ownerStore, dataRes.Owner);
+        localStorage.setItem(trusteeStore, dataRes.Trustee);
+        localStorage.setItem(contractorStore, dataRes.Contractor);
+        console.log(localStorage);
+
             const res = await api.post(route, { username, password })
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
