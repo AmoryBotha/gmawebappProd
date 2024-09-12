@@ -17,6 +17,7 @@ function Home() {
     console.log(localStorage.getItem(ownerStore));
     console.log(localStorage.getItem(contractorStore));
     console.log(localStorage.getItem(trusteeStore));
+    console.log(localStorage.getItem(webIdStore));
 
     const createNote = (e) => {
     };
@@ -34,48 +35,50 @@ function Home() {
             </form>
         </div>
     );
-}
-if(owner === "false" && contractor === "true" && trustee === "true" )
-{
-    return (
-        <div>
+}else{if(owner === "false" && contractor === "true" && trustee === "true" )
+    {
+        return (
             <div>
-                <h1>GMA USER PORTAL</h1>
+                <div>
+                    <h1>GMA USER PORTAL</h1>
+                </div>
+                <h4>Welcome To The GMA Portal</h4>
+                <form onSubmit={createNote}>
+                    <input type="submit" value="Trustee Portal"></input>
+                    <input type="submit" value="Contractor Portal"></input>
+                </form>
             </div>
-            <h4>Welcome To The GMA Portal</h4>
-            <form onSubmit={createNote}>
-                <input type="submit" value="Trustee Portal"></input>
-                <input type="submit" value="Contractor Portal"></input>
-            </form>
-        </div>
-    );
-}
-if(owner === "false" && contractor === "false" && trustee === "true" ){
-    return (
-        <div>
-            <div>
-                <h1>GMA USER PORTAL</h1>
-            </div>
-            <h4>Welcome To The GMA Portal</h4>
-            <form onSubmit={createNote}>
-                <input type="submit" value="Contractor Portal"></input>
-            </form>
-        </div>
-    );
-}
-else{
-    return (
-        <div>
-            <div>
-                <h1>GMA USER PORTAL</h1>
-            </div>
-            <h4>Welcome To The GMA Portal</h4>
-            <form onSubmit={createNote}>
-            <h1>You do not have access to any portals, please contact us.</h1>
-            </form>
-        </div>
-    );  
-}
+        );
+    }
+    else{
+        if(owner === "false" && contractor === "false" && trustee === "true" ){
+            return (
+                <div>
+                    <div>
+                        <h1>GMA USER PORTAL</h1>
+                    </div>
+                    <h4>Welcome To The GMA Portal</h4>
+                    <form onSubmit={createNote}>
+                        <input type="submit" value="Contractor Portal"></input>
+                    </form>
+                </div>
+            );
+        }
+        else{
+            return (
+                <div>
+                    <div>
+                        <h1>GMA USER PORTAL</h1>
+                    </div>
+                    <h4>Welcome To The GMA Portal</h4>
+                    <form onSubmit={createNote}>
+                    <h1>You do not have access to any portals, please contact us.</h1>
+                    </form>
+                </div>
+            );  
+        }
+    }
+    }
 }
 
 export default Home;
