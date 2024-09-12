@@ -60,7 +60,7 @@ function Home() {
             })
             .catch((err) => alert(err));
     };
-    if(owner === true && contractor === true && trustee === true ){
+    if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
         <div>
             <div>
