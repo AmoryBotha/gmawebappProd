@@ -36,7 +36,8 @@ function Form({ route, method }) {
                 "Content-type": "application/json; charset=UTF-8"
             }
       });
-        const dataRes = await data.json();
+        //const dataRes = await data.json();
+        const dataRes = await JSON.parse(data);
         //Set LocalStorage Items For User
         localStorage.setItem(fnameStore, fname);
         localStorage.setItem(lnameStore, lname);
