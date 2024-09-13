@@ -14,10 +14,11 @@ function Home() {
     localStorage.getItem(webIdStore);
     localStorage.getItem(conIdStore);
     localStorage.getItem(usernameStore);
-    console.log(localStorage.getItem(owner));
-    console.log(localStorage.getItem(contractor));
-    console.log(localStorage.getItem(trustee));
+    //console.log(localStorage.getItem(owner));
+    //console.log(localStorage.getItem(contractor));
+    //console.log(localStorage.getItem(trustee));
     console.log(localStorage.getItem(webIdStore));
+    console.log(owner, contractor, trustee);
 
     const createNote = (e) => {
             e.preventDefault();
