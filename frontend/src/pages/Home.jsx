@@ -11,9 +11,9 @@ function Home() {
     const owner = localStorage.getItem('ownerStore');
     const contractor = localStorage.getItem('contractorStore');
     const trustee = localStorage.getItem('trusteeStore');
-    localStorage.getItem(webIdStore);
-    localStorage.getItem(conIdStore);
-    localStorage.getItem(usernameStore);
+    localStorage.getItem('webIdStore');
+    localStorage.getItem('conIdStore');
+    localStorage.getItem('usernameStore');
     console.log(localStorage.getItem('ownerStore'));
     console.log(localStorage.getItem('contractorStore'));
     console.log(localStorage.getItem('trusteeStore'));
