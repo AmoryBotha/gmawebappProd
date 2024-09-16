@@ -69,26 +69,85 @@ function Home() {
                     </div>
                     <h4>Welcome To The GMA Portal</h4>
                     <form onSubmit={createNote}>
-                        <input type="submit" value="Contractor Portal"></input>
+                        <input type="submit" value="Trustee Portal"></input>
                     </form>
                 </div>
             );
         }
         else{
-            return (
-                <div>
+            if(owner === "false" && contractor === "true" && trustee === "false" ){
+                return (
                     <div>
-                        <h1>GMA USER PORTAL</h1>
+                        <div>
+                            <h1>GMA USER PORTAL</h1>
+                        </div>
+                        <h4>Welcome To The GMA Portal</h4>
+                        <form onSubmit={createNote}>
+                            <input type="submit" value="Contractor Portal"></input>
+                        </form>
                     </div>
-                    <h4>Welcome To The GMA Portal</h4>
-                    <form onSubmit={createNote}>
-                    <h1>You do not have access to any portals, please contact us.</h1>
-                    </form>
-                </div>
-            );  
+                );
+            } else{
+                if(owner === "true" && contractor === "false" && trustee === "false" ){
+                    return (
+                        <div>
+                            <div>
+                                <h1>GMA USER PORTAL</h1>
+                            </div>
+                            <h4>Welcome To The GMA Portal</h4>
+                            <form onSubmit={createNote}>
+                                <input type="submit" value="Owner Portal"></input>
+                            </form>
+                        </div>
+                    );
+                }
+                else{if(owner === "true" && contractor === "true" && trustee === "false" )
+                    {
+                        return (
+                            <div>
+                                <div>
+                                    <h1>GMA USER PORTAL</h1>
+                                </div>
+                                <h4>Welcome To The GMA Portal</h4>
+                                <form onSubmit={createNote}>
+                                    <input type="submit" value="Owner Portal"></input>
+                                    <input type="submit" value="Contractor Portal"></input>
+                                </form>
+                            </div>
+                        );
+                    }else{
+                        if(owner === "true" && contractor === "false" && trustee === "true" )
+                            {
+                                return (
+                                    <div>
+                                        <div>
+                                            <h1>GMA USER PORTAL</h1>
+                                        </div>
+                                        <h4>Welcome To The GMA Portal</h4>
+                                        <form onSubmit={createNote}>
+                                            <input type="submit" value="Owner Portal"></input>
+                                            <input type="submit" value="Trustee Portal"></input>
+                                        </form>
+                                    </div>
+                                );
+                            }else{
+                                return (
+                                <div>
+                                    <div>
+                                        <h1>GMA USER PORTAL</h1>
+                                    </div>
+                                    <h4>Welcome To The GMA Portal</h4>
+                                    <form onSubmit={createNote}>
+                                    <h1>You do not have access to any portals, please contact us.</h1>
+                                    </form>
+                                </div>
+                            );
+                        }
+                    }
+                }  
         }
     }
     }
 }
-
+}
 export default Home;
