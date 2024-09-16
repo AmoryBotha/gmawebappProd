@@ -39,19 +39,19 @@ function Form({ route, method }) {
       });
         const dataRes = await data.json();
         //Set LocalStorage Items For User
-        localStorage.setItem(fnameStore, fname);
-        localStorage.setItem(lnameStore, lname);
-        localStorage.setItem(cellStore, cell);
-        localStorage.setItem(idStore, id);
-        localStorage.setItem(usernameStore, username);
-        localStorage.setItem(webIdStore, dataRes.UserP);
-        localStorage.setItem(conIdStore, dataRes.ContactID);
+        localStorage.setItem('fnameStore', fname);
+        localStorage.setItem('lnameStore', lname);
+        localStorage.setItem('cellStore', cell);
+        localStorage.setItem('idStore', id);
+        localStorage.setItem('usernameStore', username);
+        localStorage.setItem('webIdStore', dataRes.UserP);
+        localStorage.setItem('conIdStore', dataRes.ContactID);
         localStorage.setItem('ownerStore', dataRes.accOwn);
         localStorage.setItem('trusteeStore', dataRes.accTrus);
         localStorage.setItem('contractorStore', dataRes.accCont);
         console.log(dataRes.accOwn,dataRes.accTrus,dataRes.accCont);
         console.log(localStorage.getItem('trusteeStore'));
-        console.log(localStorage.getItem(webIdStore));
+        console.log(localStorage.getItem('webIdStore'));
 
             const res = await api.post(route, { username, password })
             if (method === "login") {

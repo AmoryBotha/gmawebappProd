@@ -17,7 +17,7 @@ function Home() {
     console.log(localStorage.getItem('ownerStore'));
     console.log(localStorage.getItem('contractorStore'));
     console.log(localStorage.getItem('trusteeStore'));
-    console.log(localStorage.getItem(webIdStore));
+    console.log(localStorage.getItem('webIdStore'));
     console.log(owner, contractor, trustee);
 
     const createNote = (e) => {
