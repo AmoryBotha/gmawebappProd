@@ -1,9 +1,10 @@
 import { useState } from "react";
 import api from "../api";
 import { useNavigate } from "react-router-dom";
-import { ACCESS_TOKEN, REFRESH_TOKEN, fnameStore,lnameStore,cellStore,idStore,usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
+//import { ACCESS_TOKEN, REFRESH_TOKEN, fnameStore,lnameStore,cellStore,idStore,usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
+import { ACCESS_TOKEN, REFRESH_TOKEN, fnameStore,lnameStore,cellStore,idStore,usernameStore,webIdStore,conIdStore } from "../constants";
 
 function Form({ route, method }) {
     const [fname, setFName] = useState("");
@@ -45,11 +46,11 @@ function Form({ route, method }) {
         localStorage.setItem(usernameStore, username);
         localStorage.setItem(webIdStore, dataRes.UserP);
         localStorage.setItem(conIdStore, dataRes.ContactID);
-        localStorage.setItem(ownerStore, dataRes.accOwn);
-        localStorage.setItem(trusteeStore, dataRes.accTrus);
-        localStorage.setItem(contractorStore, dataRes.accCont);
+        localStorage.setItem('ownerStore', dataRes.accOwn);
+        localStorage.setItem('trusteeStore', dataRes.accTrus);
+        localStorage.setItem('contractorStore', dataRes.accCont);
         console.log(dataRes.accOwn,dataRes.accTrus,dataRes.accCont);
-        console.log(localStorage.getItem(trusteeStore));
+        console.log(localStorage.getItem('trusteeStore'));
         console.log(localStorage.getItem(webIdStore));
 
             const res = await api.post(route, { username, password })
