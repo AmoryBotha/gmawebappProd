@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
-import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
+//import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 
 
 
@@ -14,9 +14,9 @@ function Home() {
     localStorage.getItem(webIdStore);
     localStorage.getItem(conIdStore);
     localStorage.getItem(usernameStore);
-    //console.log(localStorage.getItem(owner));
-    //console.log(localStorage.getItem(contractor));
-    //console.log(localStorage.getItem(trustee));
+    console.log(localStorage.getItem(ownerStore));
+    console.log(localStorage.getItem(contractorStore));
+    console.log(localStorage.getItem(trusteeStore));
     console.log(localStorage.getItem(webIdStore));
     console.log(owner, contractor, trustee);
 
