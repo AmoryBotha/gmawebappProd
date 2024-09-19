@@ -20,7 +20,13 @@ function Home() {
     console.log(localStorage.getItem('webIdStore'));
     console.log(owner, contractor, trustee);
 
-    const createNote = (e) => {
+    const contractorPortal = (e) => {
+        navigate("/")
+    };
+    const ownerPortal = (e) => {
+        navigate("/")
+    };
+    const trusteePortal = (e) => {
         navigate("/")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
@@ -30,9 +36,13 @@ function Home() {
                 <h1>GMA USER PORTAL</h1>
             </div>
             <h4>Welcome To The GMA Portal</h4>
-            <form onSubmit={createNote}>
+            <form onSubmit={ownerPortal}>
                 <input type="submit" value="Owner Portal"></input>
+            </form>
+            <form onSubmit={trusteePortal}>
                 <input type="submit" value="Trustee Portal"></input>
+            </form>
+            <form onSubmit={contractorPortal}>
                 <input type="submit" value="Contractor Portal"></input>
             </form>
         </div>
@@ -45,9 +55,11 @@ function Home() {
                     <h1>GMA USER PORTAL</h1>
                 </div>
                 <h4>Welcome To The GMA Portal</h4>
-                <form onSubmit={createNote}>
-                    <input type="submit" value="Trustee Portal"></input>
-                    <input type="submit" value="Contractor Portal"></input>
+                <form onSubmit={trusteePortal}>
+                <input type="submit" value="Trustee Portal"></input>
+                </form>
+                <form onSubmit={contractorPortal}>
+                <input type="submit" value="Contractor Portal"></input>
                 </form>
             </div>
         );
@@ -60,9 +72,9 @@ function Home() {
                         <h1>GMA USER PORTAL</h1>
                     </div>
                     <h4>Welcome To The GMA Portal</h4>
-                    <form onSubmit={createNote}>
-                        <input type="submit" value="Trustee Portal"></input>
-                    </form>
+                    <form onSubmit={trusteePortal}>
+                <input type="submit" value="Trustee Portal"></input>
+                </form>
                 </div>
             );
         }
@@ -74,9 +86,9 @@ function Home() {
                             <h1>GMA USER PORTAL</h1>
                         </div>
                         <h4>Welcome To The GMA Portal</h4>
-                        <form onSubmit={createNote}>
-                            <input type="submit" value="Contractor Portal"></input>
-                        </form>
+                        <form onSubmit={contractorPortal}>
+                <input type="submit" value="Contractor Portal"></input>
+                </form>
                     </div>
                 );
             } else{
@@ -87,9 +99,9 @@ function Home() {
                                 <h1>GMA USER PORTAL</h1>
                             </div>
                             <h4>Welcome To The GMA Portal</h4>
-                            <form onSubmit={createNote}>
-                                <input type="submit" value="Owner Portal"></input>
-                            </form>
+                            <form onSubmit={ownerPortal}>
+                <input type="submit" value="Owner Portal"></input>
+                </form>
                         </div>
                     );
                 }
@@ -101,10 +113,12 @@ function Home() {
                                     <h1>GMA USER PORTAL</h1>
                                 </div>
                                 <h4>Welcome To The GMA Portal</h4>
-                                <form onSubmit={createNote}>
-                                    <input type="submit" value="Owner Portal"></input>
-                                    <input type="submit" value="Contractor Portal"></input>
-                                </form>
+                                <form onSubmit={ownerPortal}>
+                <input type="submit" value="Owner Portal"></input>
+                </form>
+                                <form onSubmit={contractorPortal}>
+                <input type="submit" value="Contractor Portal"></input>
+                </form>
                             </div>
                         );
                     }else{
@@ -116,10 +130,12 @@ function Home() {
                                             <h1>GMA USER PORTAL</h1>
                                         </div>
                                         <h4>Welcome To The GMA Portal</h4>
-                                        <form onSubmit={createNote}>
-                                            <input type="submit" value="Owner Portal"></input>
-                                            <input type="submit" value="Trustee Portal"></input>
-                                        </form>
+                                        <form onSubmit={ownerPortal}>
+                <input type="submit" value="Owner Portal"></input>
+                </form>
+                <form onSubmit={trusteePortal}>
+                <input type="submit" value="Trustee Portal"></input>
+                </form>
                                     </div>
                                 );
                             }else{
