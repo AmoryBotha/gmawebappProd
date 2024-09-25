@@ -31,9 +31,9 @@ function App() {
             </ProtectedRoute>
           }
         />
-        <Route path="/OwnerLanding" element={<OwnerLanding />} />
-        <Route path="/TrusteeLanding" element={<TrusteeLanding />} />
-        <Route path="/ContractorLanding" element={<ContractorLanding />} />
+        <Route path="/home/ownerLanding" element={<OwnerLanding />} />
+        <Route path="/home/trusteeLanding" element={<TrusteeLanding />} />
+        <Route path="/home/contractorLanding" element={<ContractorLanding />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
