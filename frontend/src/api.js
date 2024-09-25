@@ -1,7 +1,7 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-const apiUrl = "/choreo-apis/testgma/backend/v1";
+const apiUrl = "/choreo-apis/testgma3/backend/v1";
 
 const api = axios.create({
   baseURL: apiUrl,
