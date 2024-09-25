@@ -1,6 +1,6 @@
-function trusteeLanding(){
+function TrusteeLanding(){
     return <div>Trustee Landing Page</div>
 
 }
 
-export default trusteeLanding
+export default TrusteeLanding

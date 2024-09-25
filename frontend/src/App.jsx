@@ -5,9 +5,9 @@ import Register from "./pages/Register"
 import Home from "./pages/Home"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
-import ownerLanding from "./pages/OwnerLanding"
-import trusteeLanding from "./pages/TrusteeLanding"
-import contractorLanding from "./pages/ContractorLanding"
+import OwnerLanding from "./pages/OwnerLanding"
+import TrusteeLanding from "./pages/TrusteeLanding"
+import ContractorLanding from "./pages/ContractorLanding"
 
 function Logout() {
   localStorage.clear()
@@ -35,9 +35,9 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/ownerLanding" element={<ownerLanding />} />
-        <Route path="/trusteeLanding" element={<trusteeLanding />} />
-        <Route path="/contractorLanding" element={<contractorLanding />} />
+        <Route path="/ownerLanding" element={<OwnerLanding />} />
+        <Route path="/trusteeLanding" element={<TrusteeLanding />} />
+        <Route path="/contractorLanding" element={<ContractorLanding />} />
       </Routes>
     </BrowserRouter>
   )

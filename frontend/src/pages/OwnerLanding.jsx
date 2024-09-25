@@ -1,6 +1,6 @@
-function ownerLanding(){
+function OwnerLanding(){
     return <div>Owner Landing Page</div>
 
 }
 
-export default ownerLanding
+export default OwnerLanding
