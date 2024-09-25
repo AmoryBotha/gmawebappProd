@@ -1,8 +1,8 @@
-import Home from "../components/Home"
+import Home1 from "../components/Home"
 
 function Home() {
     
-    return <Home route="/home" method="home" />
+    return <Home1 route="/home" method="home" />
 }
 
 export default Home

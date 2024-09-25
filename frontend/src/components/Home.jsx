@@ -6,7 +6,7 @@ import "../styles/Home.css"
 
 
 
-function Home() {
+function Home1() {
 
     const owner = localStorage.getItem('ownerStore');
     const contractor = localStorage.getItem('contractorStore');
@@ -158,4 +158,4 @@ function Home() {
     }
 }
 }
-export default Home;
+export default Home1;
