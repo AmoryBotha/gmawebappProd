@@ -35,9 +35,9 @@ function App() {
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/ownerLanding" element={<OwnerLanding />} />
-        <Route path="/trusteeLanding" element={<TrusteeLanding />} />
-        <Route path="/contractorLanding" element={<ContractorLanding />} />
+        <Route path="/OwnerLanding" element={<OwnerLanding />} />
+        <Route path="/TrusteeLanding" element={<TrusteeLanding />} />
+        <Route path="/ContractorLanding" element={<ContractorLanding />} />
       </Routes>
     </BrowserRouter>
   )

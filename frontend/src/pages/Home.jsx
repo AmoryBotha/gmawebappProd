@@ -21,13 +21,13 @@ function Home() {
     console.log(owner, contractor, trustee);
 
     const contractorPortal = (e) => {
-        navigate("/contractorLanding")
+        navigate("/ContractorLanding")
     };
     const ownerPortal = (e) => {
-        navigate("/ownerLanding")
+        navigate("/OwnerLanding")
     };
     const trusteePortal = (e) => {
-        navigate("/trusteeLanding")
+        navigate("/TrusteeLanding")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
