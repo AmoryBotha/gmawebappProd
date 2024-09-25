@@ -24,20 +24,20 @@ function App() {
     <BrowserRouter>
       <Routes>
         <Route
-          path="/"
+          path="/home"
           element={
             <ProtectedRoute>
               <Home />
             </ProtectedRoute>
           }
         />
+        <Route path="/OwnerLanding" element={<OwnerLanding />} />
+        <Route path="/TrusteeLanding" element={<TrusteeLanding />} />
+        <Route path="/ContractorLanding" element={<ContractorLanding />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />
         <Route path="*" element={<NotFound />}></Route>
-        <Route path="/OwnerLanding" element={<OwnerLanding />} />
-        <Route path="/TrusteeLanding" element={<TrusteeLanding />} />
-        <Route path="/ContractorLanding" element={<ContractorLanding />} />
       </Routes>
     </BrowserRouter>
   )
