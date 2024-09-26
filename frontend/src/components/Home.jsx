@@ -3,6 +3,7 @@ import { useNavigate } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
+import LoadingIndicator from "./LoadingIndicator";
 //import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 
 
@@ -22,12 +23,18 @@ function Home1() {
     console.log(owner, contractor, trustee);
 
     const contractorPortal = (e) => {
+        setLoading(true);
+        e.preventDefault();
         navigate("/contractorLanding")
     };
     const ownerPortal = (e) => {
+        setLoading(true);
+        e.preventDefault();
         navigate("/ownerLanding")
     };
     const trusteePortal = (e) => {
+        setLoading(true);
+        e.preventDefault();
         navigate("/trusteeLanding")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
