@@ -45,13 +45,13 @@ function Home1() {
             </div>
             <h4>Welcome To The GMA Portal</h4>
             <form onSubmit={ownerPortal}>
-                <input type="submit" value="Owner Portal"></input>
+                <button type="submit" value="Owner Portal"></button>
             </form>
             <form onSubmit={trusteePortal}>
-                <input type="submit" value="Trustee Portal"></input>
+                <button type="submit" value="Trustee Portal"></button>
             </form>
             <form onSubmit={contractorPortal}>
-                <input type="submit" value="Contractor Portal"></input>
+                <button type="submit" value="Contractor Portal"></button>
             </form>
         </div>
     );
