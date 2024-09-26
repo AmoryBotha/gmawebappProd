@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
@@ -21,13 +22,13 @@ function Home1() {
     console.log(owner, contractor, trustee);
 
     const contractorPortal = (e) => {
-        navigate("/home/contractorLanding")
+        navigate("/contractorLanding")
     };
     const ownerPortal = (e) => {
-        navigate("/home/ownerLanding")
+        navigate("/ownerLanding")
     };
     const trusteePortal = (e) => {
-        navigate("/home/trusteeLanding")
+        navigate("/trusteeLanding")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
