@@ -1,5 +1,8 @@
 function ContractorLanding(){
-    return <div>Contractor Landing Page</div>
+    return <div>
+        <h1>CONTRACTOR LANDING PAGE</h1>
+        <p>Coming Soon...</p>
+    </div>
 
 }
 

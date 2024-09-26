@@ -1,5 +1,8 @@
 function OwnerLanding(){
-    return <div>Owner Landing Page</div>
+    return <div>
+        <h1>OWNER LANDING PAGE</h1>
+        <p>Under Construction...</p>
+    </div>
 
 }
 
