@@ -27,13 +27,13 @@ function App() {
           path="/home"
           element={
             <ProtectedRoute>
-              <Home />
+              <Home />             
+              <Route path="/ownerLanding" element={<OwnerLanding />} />
+              <Route path="/trusteeLanding" element={<TrusteeLanding />} />
+              <Route path="/contractorLanding" element={<ContractorLanding />} />
             </ProtectedRoute>
           }
         />
-        <Route path="/ownerLanding" element={<OwnerLanding />} />
-        <Route path="/trusteeLanding" element={<TrusteeLanding />} />
-        <Route path="/contractorLanding" element={<ContractorLanding />} />
         <Route path="/login" element={<Login />} />
         <Route path="/logout" element={<Logout />} />
         <Route path="/register" element={<RegisterAndLogout />} />

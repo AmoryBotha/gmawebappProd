@@ -35,7 +35,7 @@ function Home1() {
     const trusteePortal = (e) => {
         setLoading(true);
         e.preventDefault();
-        navigate("/trusteeLanding")
+        navigate("trusteeLanding")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
@@ -45,13 +45,13 @@ function Home1() {
             </div>
             <h4>Welcome To The GMA Portal</h4>
             <form onSubmit={ownerPortal}>
-                <button type="submit" value="Owner Portal"></button>
+                <input type="submit" value="Owner Portal"></input>
             </form>
             <form onSubmit={trusteePortal}>
-                <button type="submit" value="Trustee Portal"></button>
+                <input type="submit" value="Trustee Portal"></input>
             </form>
             <form onSubmit={contractorPortal}>
-                <button type="submit" value="Contractor Portal"></button>
+                <input type="submit" value="Contractor Portal"></input>
             </form>
         </div>
     );
