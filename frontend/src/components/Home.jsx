@@ -3,6 +3,7 @@ import { useNavigate, Link } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
+import "../styles/Form.css"
 import LoadingIndicator from "./LoadingIndicator";
 //import { usernameStore,webIdStore,conIdStore,ownerStore,trusteeStore,contractorStore } from "../constants";
 
@@ -44,11 +45,13 @@ function Home1() {
                 <h1>GMA USER PORTAL</h1>
             </div>
             <h4>Welcome To The GMA Portal</h4>
-            <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
-            <form onSubmit={trusteePortal}>
+            <form>
+            <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+            </form>
+            <form>
             <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
             </form>
-            <form onSubmit={contractorPortal}>
+            <form>
             <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
             </form>
         </div>
@@ -61,13 +64,13 @@ function Home1() {
                     <h1>GMA USER PORTAL</h1>
                 </div>
                 <h4>Welcome To The GMA Portal</h4>
-                <form onSubmit={trusteePortal}>
-                <input type="submit" value="Trustee Portal"></input>
+                <form>
+                <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
                 </form>
-                <form onSubmit={contractorPortal}>
-                <input type="submit" value="Contractor Portal"></input>
+                <form>
+                <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
                 </form>
-            </div>
+                </div>
         );
     }
     else{
@@ -78,9 +81,9 @@ function Home1() {
                         <h1>GMA USER PORTAL</h1>
                     </div>
                     <h4>Welcome To The GMA Portal</h4>
-                    <form onSubmit={trusteePortal}>
-                <input type="submit" value="Trustee Portal"></input>
-                </form>
+                    <form>
+                     <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+                    </form>
                 </div>
             );
         }
@@ -92,9 +95,9 @@ function Home1() {
                             <h1>GMA USER PORTAL</h1>
                         </div>
                         <h4>Welcome To The GMA Portal</h4>
-                        <form onSubmit={contractorPortal}>
-                <input type="submit" value="Contractor Portal"></input>
-                </form>
+                        <form>
+                        <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+                        </form>
                     </div>
                 );
             } else{
@@ -105,9 +108,9 @@ function Home1() {
                                 <h1>GMA USER PORTAL</h1>
                             </div>
                             <h4>Welcome To The GMA Portal</h4>
-                            <form onSubmit={ownerPortal}>
-                <input type="submit" value="Owner Portal"></input>
-                </form>
+                            <form>
+                            <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                            </form>
                         </div>
                     );
                 }
@@ -119,12 +122,12 @@ function Home1() {
                                     <h1>GMA USER PORTAL</h1>
                                 </div>
                                 <h4>Welcome To The GMA Portal</h4>
-                                <form onSubmit={ownerPortal}>
-                <input type="submit" value="Owner Portal"></input>
-                </form>
-                                <form onSubmit={contractorPortal}>
-                <input type="submit" value="Contractor Portal"></input>
-                </form>
+                                <form>
+                                 <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                                 </form>
+                                 <form>
+                                <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+                                </form>
                             </div>
                         );
                     }else{
@@ -136,12 +139,12 @@ function Home1() {
                                             <h1>GMA USER PORTAL</h1>
                                         </div>
                                         <h4>Welcome To The GMA Portal</h4>
-                                        <form onSubmit={ownerPortal}>
-                <input type="submit" value="Owner Portal"></input>
-                </form>
-                <form onSubmit={trusteePortal}>
-                <input type="submit" value="Trustee Portal"></input>
-                </form>
+                                        <form>
+                                          <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                                        </form>
+                                        <form>
+                                            <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+                                        </form>
                                     </div>
                                 );
                             }else{
