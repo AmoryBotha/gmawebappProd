@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 import api from "../api";
 import Note from "../components/Note"
 import "../styles/Home.css"
@@ -25,17 +25,17 @@ function Home1() {
     const contractorPortal = (e) => {
         setLoading(true);
         e.preventDefault();
-        navigate("/contractorLanding")
+        navigate("/home")
     };
     const ownerPortal = (e) => {
         setLoading(true);
         e.preventDefault();
-        navigate("/ownerLanding")
+        navigate("/home")
     };
     const trusteePortal = (e) => {
         setLoading(true);
         e.preventDefault();
-        navigate("/trusteeLanding")
+        navigate("/home")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
@@ -44,9 +44,7 @@ function Home1() {
                 <h1>GMA USER PORTAL</h1>
             </div>
             <h4>Welcome To The GMA Portal</h4>
-            <form onSubmit={ownerPortal}>
-                <input type="submit" value="Owner Portal"></input>
-            </form>
+            <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
             <form onSubmit={trusteePortal}>
                 <input type="submit" value="Trustee Portal"></input>
             </form>
