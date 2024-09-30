@@ -1,3 +1,7 @@
+localStorage.getItem('webIdStore');
+localStorage.getItem('conIdStore');
+localStorage.getItem('usernameStore');
+
 function OwnerLanding1(){
     return <div>
         <h1>OWNER LANDING PAGE</h1>

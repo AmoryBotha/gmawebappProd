@@ -23,21 +23,6 @@ function Home1() {
     console.log(localStorage.getItem('webIdStore'));
     console.log(owner, contractor, trustee);
 
-    const contractorPortal = (e) => {
-        setLoading(true);
-        e.preventDefault();
-        navigate("/home")
-    };
-    const ownerPortal = (e) => {
-        setLoading(true);
-        e.preventDefault();
-        navigate("/home")
-    };
-    const trusteePortal = (e) => {
-        setLoading(true);
-        e.preventDefault();
-        navigate("/home")
-    };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (
         <div>
