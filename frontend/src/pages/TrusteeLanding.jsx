@@ -1,8 +1,7 @@
+import TrusteeLanding1 from "../components/TrusteeLanding"
+
 function TrusteeLanding(){
-    return <div>
-        <h1>TRUSTEE LANDING PAGE</h1>
-        <p>Coming Soon...</p>
-        </div>
+    return <TrusteeLanding1 route="/trusteeLanding" method="trusteeLanding" />
 
 }
 

@@ -35,7 +35,7 @@ function Home1() {
     const trusteePortal = (e) => {
         setLoading(true);
         e.preventDefault();
-        navigate("trusteeLanding")
+        navigate("/trusteeLanding")
     };
     if(owner === "true" && contractor === "true" && trustee === "true" ){
     return (

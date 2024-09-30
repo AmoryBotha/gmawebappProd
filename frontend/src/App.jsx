@@ -31,7 +31,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-        
         <Route path="/ownerLanding" element={<OwnerLanding />} />
         <Route path="/trusteeLanding" element={<TrusteeLanding />} />
         <Route path="/contractorLanding" element={<ContractorLanding />} />
@@ -45,3 +44,4 @@ function App() {
 }
 
 export default App
+

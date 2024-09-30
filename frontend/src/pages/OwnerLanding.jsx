@@ -1,9 +1,8 @@
-function OwnerLanding(){
-    return <div>
-        <h1>OWNER LANDING PAGE</h1>
-        <p>Under Construction...</p>
-    </div>
+import OwnerLanding1 from "../components/OwnerLanding"
 
+function OwnerLanding() {
+    
+    return <OwnerLanding1 route="/ownerLanding" method="ownerLanding" />
 }
 
 export default OwnerLanding
