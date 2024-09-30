@@ -49,10 +49,10 @@ function Home1() {
             <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
             </form>
             <form>
-            <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+            <li class='form-button'><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
             </form>
             <form>
-            <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+            <li class='form-button'><Link to ="/contractorLanding">ContractorLanding</Link> </li>
             </form>
         </div>
     );
@@ -65,10 +65,10 @@ function Home1() {
                 </div>
                 <h4>Welcome To The GMA Portal</h4>
                 <form>
-                <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+                <li class='form-button'><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
                 </form>
                 <form>
-                <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+                <li class='form-button'><Link to ="/contractorLanding">ContractorLanding</Link> </li>
                 </form>
                 </div>
         );
@@ -82,7 +82,7 @@ function Home1() {
                     </div>
                     <h4>Welcome To The GMA Portal</h4>
                     <form>
-                     <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+                     <li class='form-button'><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
                     </form>
                 </div>
             );
@@ -96,7 +96,7 @@ function Home1() {
                         </div>
                         <h4>Welcome To The GMA Portal</h4>
                         <form>
-                        <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+                        <li class='form-button'><Link to ="/contractorLanding">ContractorLanding</Link> </li>
                         </form>
                     </div>
                 );
@@ -109,7 +109,7 @@ function Home1() {
                             </div>
                             <h4>Welcome To The GMA Portal</h4>
                             <form>
-                            <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                            <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
                             </form>
                         </div>
                     );
@@ -123,10 +123,10 @@ function Home1() {
                                 </div>
                                 <h4>Welcome To The GMA Portal</h4>
                                 <form>
-                                 <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                                 <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
                                  </form>
                                  <form>
-                                <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+                                <li class='form-button'><Link to ="/contractorLanding">ContractorLanding</Link> </li>
                                 </form>
                             </div>
                         );
@@ -140,10 +140,10 @@ function Home1() {
                                         </div>
                                         <h4>Welcome To The GMA Portal</h4>
                                         <form>
-                                          <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
+                                          <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
                                         </form>
                                         <form>
-                                            <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
+                                            <li class='form-button'><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
                                         </form>
                                     </div>
                                 );
