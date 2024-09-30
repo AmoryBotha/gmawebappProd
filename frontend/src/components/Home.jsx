@@ -46,7 +46,7 @@ function Home1() {
             <h4>Welcome To The GMA Portal</h4>
             <li><Link to ="/ownerLanding">OwnerLanding</Link> </li>
             <form onSubmit={trusteePortal}>
-                <input type="submit" value="Trustee Portal"></input>
+            <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
             </form>
             <form onSubmit={contractorPortal}>
                 <input type="submit" value="Contractor Portal"></input>
