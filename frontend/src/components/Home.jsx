@@ -49,7 +49,7 @@ function Home1() {
             <li><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
             </form>
             <form onSubmit={contractorPortal}>
-                <input type="submit" value="Contractor Portal"></input>
+            <li><Link to ="/contractorLanding">ContractorLanding</Link> </li>
             </form>
         </div>
     );
