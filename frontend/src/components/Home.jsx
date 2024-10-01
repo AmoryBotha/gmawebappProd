@@ -31,13 +31,18 @@ function Home1() {
             </div>
             <h4>Welcome To The GMA Portal</h4>
             <form>
+            <div className="inline-container">
+            <div className="inline-box">
             <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
-            </form>
-            <form>
+            </div>
+            <div className="inline-box">
             <li class='form-button'><Link to ="/trusteeLanding">TrusteeLanding</Link> </li>
-            </form>
-            <form>
+            </div>
+            <div className="inline-box">
             <li class='form-button'><Link to ="/contractorLanding">ContractorLanding</Link> </li>
+            </div>
+            </div>
+            <li class='form-button'><Link to ="/ownerLanding">OwnerLanding</Link> </li>
             </form>
         </div>
     );
