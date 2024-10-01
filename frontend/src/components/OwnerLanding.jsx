@@ -1,6 +1,6 @@
-localStorage.getItem('webIdStore');
-localStorage.getItem('conIdStore');
-localStorage.getItem('usernameStore');
+const webID = localStorage.getItem('webIdStore');
+const conId = localStorage.getItem('conIdStore');
+const mail = localStorage.getItem('usernameStore');
 
 function OwnerLanding1(){
     return <div>
@@ -15,15 +15,19 @@ function OwnerLanding1(){
             <div className="inline-container">
             <div className="inline-box">
             Owner Account Number
+            <p>Test Acc</p>
             </div>
             <div className="inline-box">
             Reg/ID No
+            <p>645395938</p>
             </div>
             <div className="inline-box">
             Phone Number
+            <p>09876789980</p>
             </div>
             <div className="inline-box">
             Email
+            <p>{mail}</p>
             </div>
             <div className="inline-box">
             <button className="form-button" type="submit">
@@ -32,24 +36,34 @@ function OwnerLanding1(){
             </div>
             </div>
             
-            <div><h1>Owner Account Number</h1></div>
-            <div><h1>Reg/ID No</h1></div>
-            <div><h1>Phone Number</h1></div>
-            <div><h1>Email</h1></div>
-            <div><button className="form-button" type="submit">
-                Modify
-            </button></div>
-            <div>
-            <div><h1>Levy Account</h1></div>
-            <div><h1>Building</h1></div>
-            <div><h1>Door Number</h1></div>
-            <div><h1>Current Balance</h1></div>
-            <div><button className="form-button" type="submit">
+            
+            <div className="inline-container">
+            <div className="inline-box">
+            Levy Account
+            <p>GMA001</p>
+            </div>
+            <div className="inline-box">
+            Building
+            <p>Test BC</p>
+            </div>
+            <div className="inline-box">
+            Door Number
+            <p>8</p>
+            </div>
+            <div className="inline-box">
+            Current Balance
+            <p>R 9000,09</p>
+            </div>
+            <div className="inline-box">
+            <button className="form-button" type="submit">
                 Download Statement
-            </button></div>
-            <div><button className="form-button" type="submit">
+            </button>
+            </div>
+            <div className="inline-box">
+            <button className="form-button" type="submit">
                 Edit
-            </button></div>
+            </button>
+            </div>
             </div>
             </div>
         </div>
