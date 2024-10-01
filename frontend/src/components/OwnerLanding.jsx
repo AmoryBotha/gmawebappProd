@@ -12,6 +12,26 @@ function OwnerLanding1(){
             <h4>Accounts Linked To Your Account</h4>
             <p>ABC</p>
             <div>
+            <div className="inline-container">
+            <div className="inline-box">
+            Owner Account Number
+            </div>
+            <div className="inline-box">
+            Reg/ID No
+            </div>
+            <div className="inline-box">
+            Phone Number
+            </div>
+            <div className="inline-box">
+            Email
+            </div>
+            <div className="inline-box">
+            <button className="form-button" type="submit">
+                Modify
+            </button>
+            </div>
+            </div>
+            
             <div><h1>Owner Account Number</h1></div>
             <div><h1>Reg/ID No</h1></div>
             <div><h1>Phone Number</h1></div>
