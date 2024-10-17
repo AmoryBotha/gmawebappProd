@@ -1,10 +1,10 @@
 import axios from "axios";
 import { ACCESS_TOKEN } from "./constants";
 
-const apiUrl = "/choreo-apis/testgma3/backend/v1";
+const apiUrl = "http://localhost:8000/";
 
 const api = axios.create({
-  baseURL: apiUrl,
+  baseURL: import.meta.env.VITE_API_URL,
 });
 
 api.interceptors.request.use(
